@@ -1,0 +1,23 @@
+<!-- templates/callback.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Successful</title>
+    <script>
+        // Automatically redirect to the dashboard after 3 seconds
+        setTimeout(function(){
+            window.location.href = "auth/dashboard";  // Update the URL to your dashboard's route
+        }, 3000);
+    </script>
+</head>
+<body>
+    <h2>Authentication Successful</h2>
+    <p>You have been successfully authenticated. Redirecting to the dashboard...</p>
+    <!-- For debugging purposes, display tokens (remove in production) -->
+    <h3>Access Token:</h3>
+    <pre>{{ token.access_token }}</pre>
+    <h3>ID Token:</h3>
+    <pre>{{ token.id_token }}</pre>
+    <!-- In a real application, you would not display tokens to the user -->
+</body>
+</html>
